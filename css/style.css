@@ -67,6 +67,13 @@ body {
     background-color: hsl(150, 100%, 66%);
 }
 
+.attribution {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    color: #FFFFFF;
+}
+
 @media (max-width: 768px) {
     .advice {
         width: 300px;
