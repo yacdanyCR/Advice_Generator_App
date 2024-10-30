@@ -1,18 +1,19 @@
-import { getAdviceApi } from "./Api/getAdviceApi.js";
+import { handleAdvice } from "./Services/handleAdvice.js";
 
 const $advice__Title = document.querySelector(".advice__Title");
 const $advice__Mesage = document.querySelector(".advice__Mesage");
+const $btn_Advice = document.querySelector("#btn_Advice");
 
-const app = async () => {
-  const data = await getAdviceApi();
-  const h6 = document.createElement("h6");
-  const p = document.createElement("p");
+window.addEventListener(
+  "DOMContentLoaded",
+  handleAdvice($advice__Title, $advice__Mesage)
+);
 
-  h6.append(`Advice  ${data.id}`);
-  p.append(data.advice);
+$btn_Advice.addEventListener("click", async () => {
+  while ($advice__Title.firstChild && $advice__Mesage.firstChild) {
+    $advice__Title.removeChild($advice__Title.firstChild);
+    $advice__Mesage.removeChild($advice__Mesage.firstChild);
+  }
 
-  $advice__Title.appendChild(h6);
-  $advice__Mesage.appendChild(p);
-};
-
-app();
+  await handleAdvice($advice__Title, $advice__Mesage);
+});

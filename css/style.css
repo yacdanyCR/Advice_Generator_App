@@ -6,6 +6,11 @@
     border: 0;
 }
 
+button {
+    cursor: pointer;
+    background: none;
+}
+
 body {
     background-color: hsl(218, 23%, 16%);
     font-size: 28px;
@@ -70,9 +75,26 @@ body {
 .attribution {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 65px;
     font-size: 1rem;
     color: #FFFFFF;
+}
+
+.attribution>div {
+    margin-left: 1rem;
+}
+
+.footer__flag {
+    display: flex;
+}
+
+#btn_Advice:hover {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 @media (max-width: 768px) {
