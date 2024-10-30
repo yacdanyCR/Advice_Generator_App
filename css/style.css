@@ -66,3 +66,18 @@ body {
     justify-content: center;
     background-color: hsl(150, 100%, 66%);
 }
+
+@media (max-width: 768px) {
+    .advice {
+        width: 300px;
+    }
+
+    .advice__Section {
+        margin-top: 40%;
+        padding: 1rem;
+    }
+
+    .advice__Space {
+        display: none;
+    }
+}
